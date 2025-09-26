@@ -1,0 +1,54 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background-color: #0a619f;
+  font-family: "Jersey 20", sans-serif;
+  color: white;
+}
+
+h1 {
+  font-family: "Jacquard 12", sans-serif;
+  font-size: 200px;
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.container-choices {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  gap: 100px;
+}
+
+button {
+  font-family: "Jersey 20", sans-serif;
+  font-size: 70px;
+  background: none;
+  border: solid white 6px;
+  padding: 10px 40px;
+  color: white;
+}
+
+.tails {
+  padding: 10px 60px;
+}
+
+p {
+  font-size: 64px;
+}
+
+img {
+  height: 580px;
+  width: 683px;
+}
