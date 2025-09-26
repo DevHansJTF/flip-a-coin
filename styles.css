@@ -14,6 +14,15 @@ h1 {
   color: #ffffff;
 }
 
+p {
+  font-size: 64px;
+}
+
+img {
+  height: 580px;
+  width: 683px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -21,6 +30,16 @@ h1 {
   justify-content: center;
   text-align: center;
   height: 100vh;
+}
+
+button {
+  font-family: "Jersey 20", sans-serif;
+  font-size: 70px;
+  background: none;
+  border: solid white 6px;
+  border-radius: 10px;
+  padding: 10px 40px;
+  color: white;
 }
 
 .container-choices {
@@ -31,24 +50,22 @@ h1 {
   gap: 100px;
 }
 
-button {
-  font-family: "Jersey 20", sans-serif;
-  font-size: 70px;
-  background: none;
-  border: solid white 6px;
-  padding: 10px 40px;
-  color: white;
-}
-
 .tails {
   padding: 10px 60px;
 }
 
-p {
-  font-size: 64px;
+.flip {
+  animation: flip 0.6s ease-in-out;
 }
 
-img {
-  height: 580px;
-  width: 683px;
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
 }
