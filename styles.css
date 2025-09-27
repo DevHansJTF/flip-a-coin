@@ -8,8 +8,9 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   min-height: 100vh;
   padding: 20px;
   overflow: hidden;
@@ -53,6 +54,7 @@ button {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-left: 120px;
 }
 
 .image-wrapper h2 {
@@ -64,7 +66,6 @@ button {
   align-items: center;
   justify-content: center;
   gap: 100px;
-
   width: 100%;
 }
 @keyframes flip {

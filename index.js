@@ -1,4 +1,5 @@
 var score = 0;
+var highScore = 0;
 
 for (var i = 0; i < 2; i++) {
   document.querySelectorAll("button")[i].addEventListener("click", function () {
@@ -33,6 +34,7 @@ function coinResult(side) {
     document.querySelector("h1").innerHTML = "Heads. You win!";
     score++;
     scoreCounter();
+    updatehighScore();
   } else if (coinSide === 1 && side === "tails") {
     document.querySelector("h1").innerHTML = "Heads. You lost!";
     scoreReset();
@@ -40,6 +42,7 @@ function coinResult(side) {
     document.querySelector("h1").innerHTML = "Tails. You win!";
     score++;
     scoreCounter();
+    updatehighScore();
   } else {
     document.querySelector("h1").innerHTML = "Tails. You lost!";
     scoreReset();
@@ -53,4 +56,13 @@ function scoreCounter() {
 function scoreReset() {
   score = 0;
   document.querySelector(".container-score p").innerText = score;
+}
+
+function updatehighScore() {
+  if (score > highScore) {
+    highScore = score;
+    document.querySelector(".container-high-score p").innerText = highScore;
+  } else {
+    document.querySelector(".container-high-score p").innerText = highScore;
+  }
 }
