@@ -6,6 +6,13 @@ body {
   background-color: #0a619f;
   font-family: "Jersey 20", sans-serif;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  overflow: hidden;
 }
 
 h1 {
@@ -23,15 +30,6 @@ img {
   width: 683px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
-}
-
 button {
   font-family: "Jersey 20", sans-serif;
   font-size: 70px;
@@ -42,30 +40,47 @@ button {
   color: white;
 }
 
-.container-choices {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  align-items: center;
-  gap: 100px;
-}
-
 .tails {
   padding: 10px 60px;
 }
 
 .flip {
-  animation: flip 0.6s ease-in-out;
+  animation: flip 1s ease-in-out;
 }
 
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.image-wrapper h2 {
+  font-size: 70px;
+}
+
+.container-choices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+
+  width: 100%;
+}
 @keyframes flip {
   0% {
     transform: rotateY(0deg);
   }
-  50% {
+  25% {
     transform: rotateY(90deg);
   }
-  100% {
+  50% {
     transform: rotateY(180deg);
+  }
+  75% {
+    transform: rotateY(270deg);
+  }
+  100% {
+    transform: rotateY(360deg);
   }
 }

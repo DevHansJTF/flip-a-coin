@@ -1,3 +1,5 @@
+var score = 0;
+
 for (var i = 0; i < 2; i++) {
   document.querySelectorAll("button")[i].addEventListener("click", function () {
     var choice = this.classList[0];
@@ -17,7 +19,7 @@ function coinResult(side) {
     } else {
       img.setAttribute("src", "./images/tails.svg");
     }
-  }, 300);
+  }, 200);
 
   img.addEventListener(
     "animationend",
@@ -29,11 +31,26 @@ function coinResult(side) {
 
   if (coinSide === 1 && side === "heads") {
     document.querySelector("h1").innerHTML = "Heads. You win!";
+    score++;
+    scoreCounter();
   } else if (coinSide === 1 && side === "tails") {
     document.querySelector("h1").innerHTML = "Heads. You lost!";
+    scoreReset();
   } else if (coinSide === 2 && side === "tails") {
     document.querySelector("h1").innerHTML = "Tails. You win!";
+    score++;
+    scoreCounter();
   } else {
     document.querySelector("h1").innerHTML = "Tails. You lost!";
+    scoreReset();
   }
+}
+
+function scoreCounter() {
+  document.querySelector(".container-score p").innerText = score;
+}
+
+function scoreReset() {
+  score = 0;
+  document.querySelector(".container-score p").innerText = score;
 }
